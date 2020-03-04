@@ -1,0 +1,137 @@
+.carousel-item {
+  height: 66.6666%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(0.75);
+    filter: blur(5px);
+    border-radius: 8px;
+    transition: all linear .3s;
+  }
+}
+
+.slick-current {
+  img {
+    transform: none;
+    filter: none;
+    transition: all linear .3s;
+  }
+
+}
+
+.carousel-tools {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+
+  &-item {
+    width: 134px;
+    min-width: 134px;
+    height: 94px;
+    padding: 6px 3px;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid transparent;
+      border-radius: 3px;
+    }
+  }
+
+  .tns-nav-active {
+    img {
+      border-color: var(--pale-red);
+    }
+  }
+}
+
+////////////////////////////////////////////////
+
+input{display: none;}
+
+.carusel{
+  position: relative;
+  //max-width: 400px;
+  height: 400px;
+  //max-height: 100vh;
+  margin: 20px auto;
+  overflow: hidden;
+  user-select: none;
+}
+
+.carusel__item {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: center no-repeat;
+  background-size: contain;
+  transition: all linear .3s;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.carusel__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  color: #fff;
+  background-color: #999;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: bold;
+}
+
+input:checked+div~div~div~div .carusel__item {background-image: none !important;}
+input:checked+div *, input:checked+div+input+div .carusel__item, input:checked+div+input+div+input+div * {display: block;}
+
+input:checked+div .carusel__item {left: -36%; transform: scale(0.72);  filter: blur(5px); transition: all linear .3s;}
+input:checked+div+input+div .carusel__item {left: 0; transform: scale(1); filter: none; z-index: 5; transition: all linear .3s;}
+input:checked+div+input+div+input+div .carusel__item {left: 36%; transform: scale(0.72); filter: blur(5px); transition: all linear .3s;}
+
+input:checked+div .carusel__arrow {left: 0;}
+input:checked+div+input+div+input+div .carusel__arrow {right: 0;}
+
+input:checked+div .carusel__arrow:before {content: '❰';}
+input:checked+div+input+div+input+div .carusel__arrow:before{content: '❱';}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

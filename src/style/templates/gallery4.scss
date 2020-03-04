@@ -1,0 +1,79 @@
+.carousel-item {
+  height: 66.6666%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(0.75);
+    filter: blur(5px);
+    border-radius: 8px;
+    transition: all linear .2s;
+  }
+}
+
+.glide__slide--active {
+  img {
+    transform: none;
+    filter: none;
+    transition: all linear .2s;
+  }
+
+}
+
+.carousel-tools {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+
+  &-item {
+    width: 134px;
+    min-width: 134px;
+    height: 94px;
+    padding: 6px 3px;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid transparent;
+      border-radius: 3px;
+    }
+  }
+
+  .glide__bullet--active {
+    background: transparent;
+    img {
+      border-color: var(--pale-red);
+    }
+  }
+}
+
+.gallery {
+  .glide__arrow {
+    top: 40%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

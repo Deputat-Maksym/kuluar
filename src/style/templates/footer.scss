@@ -1,0 +1,276 @@
+
+footer {
+  background-color: var(--pale-pink);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 35px 0 10px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    padding: 10px 0 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .inner-wrap {
+    max-width: 970px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 15px;
+      width: calc(100% - 30px);
+      height: 1px;
+      background: #E9D8D6;
+
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 100%;
+      width: 129px;
+      height: 205px;
+      background-size: contain;
+      transform: translateX(-65px);
+
+      @media only screen and (min-width: 769px) {
+        background: url("/wp-content/themes/kalamar/assets/images/k-logo.png") no-repeat;
+        bottom: 0;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        transform: translateX(-5px);
+      }
+
+      @media only screen and (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        right: 0;
+        top: calc(100% + 25px);
+
+        transform: translateX(10px);
+        background: url("/wp-content/themes/kalamar/assets/images/k-logo-mob.png") no-repeat;
+      }
+    }
+  }
+
+  .footer-col {
+    width: 25%;
+    padding: 15px;
+
+    @media only screen and (max-width: 940px) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    &--hidden {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  .f-heading {
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+}
+
+.footer-book-list, .footer-blog-list {
+  li {
+    margin: 0 0 10px;
+  }
+
+  a {
+    font-weight: 300;
+    color: var(--font-color);
+    line-height: 1.2;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--red);
+      transition: var(--transition);
+    }
+  }
+}
+
+.f-cont_desc {
+  font-weight: 300;
+}
+
+.footer-bot {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 0;
+  font-size: 0.875rem;
+
+  @media only screen and (max-width: 480px) {
+    padding: 0;
+  }
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 25px;
+  }
+}
+
+.logo-footer {
+  max-width: 140px;
+  height: auto;
+  margin: 10px 0 0;
+}
+
+.copyright {
+  margin: 0 0 10px;
+}
+
+.powered {
+  display: flex;
+  align-items: flex-end;
+
+  span {
+    line-height: 0.9;
+  }
+
+  img {
+    max-width: 58px;
+    height: auto;
+    margin: 0 0 0 5px;
+  }
+}
+
+.footer-soc-item.fb {
+  background-color: #4267b1;
+  transition: var(--transition);
+
+  &:hover {
+    background-color: #447CDA;
+  }
+
+  &:active {
+    background-color: #1B4792;
+  }
+}
+
+.footer-soc-item.insta {
+  //background-image: url(/wp-content/themes/kalamar/img/insta-paradise.png);
+  //background-size: cover;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(to right, #f39636 0%, #eb433a 50%, #5e23c8);
+    transition: var(--transition);
+    border-radius: 3px;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.footer-soc-item.fb span{
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.footer-soc-item.insta span {
+  margin-left: 10px;
+}
+
+.footer-soc-item.fb, .footer-soc-item.insta {
+  display: table;
+  border-radius: 3px;
+  margin-top: 10px;
+
+  @media only screen and (max-width: 480px) {
+    display: block;
+    max-width: 300px;
+    margin: 10px auto 0;
+  }
+}
+
+.footer-soc-item.fb a, .footer-soc-item.insta a {
+  display: flex;
+  color: white;
+  align-items: center;
+  height: 40px;
+  padding: 5px 15px;
+
+  @media only screen and (max-width: 480px) {
+    justify-content: center;
+  }
+}
+
+.footer-soc-title {
+  margin-top: 22px;
+}
+
+.footer-bot .footer-soc-item i {
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  margin-right: 50px;
+}
+
+.footer-bot span.pawered {
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.footer-bot span.copyright {
+  margin-top: 10px;
+  display: block;
+}
+
+.footer-soc-item {
+  a {
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
