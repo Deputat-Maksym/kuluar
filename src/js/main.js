@@ -2,4 +2,5 @@
 
 
 //= templates/gallery4.js
+//= templates/header.js
 
