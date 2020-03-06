@@ -198,6 +198,7 @@ header {
       .arrow-btn {
         transform: rotate(180deg);
         transition: var(--transition);
+        transform-origin: center;
       }
     }
   }
@@ -210,9 +211,12 @@ header {
 .arrow-btn {
   color: #fff;
   position: absolute;
-  top: 13px;
-  right: 0;
+  top: 0;
+  right: 3px;
   display: block;
+  font-size: 5px;
+  line-height: 45px;
+  transition: var(--transition);
 
   &:hover {
     color: var(--light-green);
